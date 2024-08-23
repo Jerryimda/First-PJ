@@ -3,6 +3,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
+using HotAvalonia;
 using Jerrybaring1.ViewModels;
 using Jerrybaring1.Views;
 
@@ -12,6 +13,7 @@ namespace Jerrybaring1
     {
         public override void Initialize()
         {
+            this.EnableHotReload();
             AvaloniaXamlLoader.Load(this);
         }
 
