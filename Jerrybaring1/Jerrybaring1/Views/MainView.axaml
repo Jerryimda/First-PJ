@@ -141,6 +141,7 @@
                                     <TextBlock
                                         Margin="10,13,0,0"
                                         Background="Transparent"
+                                        FontFamily="{StaticResource Pre}"
                                         FontSize="12"
                                         FontWeight="Medium"
                                         Text="아티클, 비디오" />
