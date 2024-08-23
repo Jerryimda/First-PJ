@@ -1,0 +1,383 @@
+<UserControl
+    x:Class="Jerrybaring1.Views.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Jerrybaring1.Views"
+    xmlns:vm="clr-namespace:Jerrybaring1.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:DataType="vm:MainViewModel"
+    mc:Ignorable="d">
+
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <UserControl.Styles>
+        <Style Selector="Button.tommy">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontFamily" Value="{StaticResource Pre}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0,0,5,0" />
+            <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+        </Style>
+    </UserControl.Styles>
+
+    <ScrollViewer>
+        <StackPanel Margin="10,0,10,0">
+
+            <StackPanel
+                Height="50"
+                VerticalAlignment="Top"
+                Background="#00d48d"
+                Orientation="Horizontal">
+                <Button Classes="tommy" Content="시리즈" />
+                <Button Classes="tommy" Content="세미나" />
+                <Button Classes="tommy" Content="톡" />
+                <Border
+                    Width="1"
+                    Height="10"
+                    Margin="0,0,5,0"
+                    BorderBrush="Black"
+                    BorderThickness="1" />
+                <Button
+                    Margin="0,0,300,0"
+                    Classes="tommy"
+                    Content="B2B" />
+                <Button
+                    Margin="0,0,375,0"
+                    Classes="tommy"
+                    Content="fol:in"
+                    FontFamily="{StaticResource Ghana}"
+                    FontSize="25" />
+                <Button
+                    Background="Black"
+                    Classes="tommy"
+                    Content="멤버십"
+                    Foreground="White">
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Style>
+                    </Button.Styles>
+                </Button>
+                <Button
+                    Background="White"
+                    Classes="tommy"
+                    Content="로그인"
+                    Foreground="Black">
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                            <Setter Property="Background" Value="White" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Style>
+                    </Button.Styles>
+                </Button>
+            </StackPanel>
+
+            <Border
+                Width="1080"
+                Height="470"
+                Margin="0,10,0,0"
+                VerticalAlignment="Top"
+                Background="#00d48d"
+                CornerRadius="5">
+                <StackPanel>
+                    <Border
+                        Width="150"
+                        Height="150"
+                        Margin="0,30,0,0"
+                        VerticalAlignment="Top"
+                        Background="Black"
+                        CornerRadius="80">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontFamily="{StaticResource Ghana}"
+                            FontSize="90"
+                            FontWeight="DemiBold"
+                            Foreground="White"
+                            Text="f:" />
+                    </Border>
+                    <TextBlock
+                        Margin="0,30,0,0"
+                        HorizontalAlignment="Center"
+                        FontFamily="{StaticResource Pre}"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        Text="성장의 경험을 나눕니다." />
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        FontFamily="{StaticResource Pre}"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        LineSpacing="5"
+                        Text="폴인은 일에 진심인 사람들을 위한 콘텐츠 구독 서비스입니다.&#10;현업 전문가 '링커(Linker)'의 경험과 인사이트로 내 커리어의 전성기를 만들어 보세요."
+                        TextAlignment="Center" />
+                    <StackPanel
+                        Margin="0,25,0,0"
+                        HorizontalAlignment="Center"
+                        Background="#00d48d"
+                        Orientation="Horizontal"
+                        Spacing="15">
+                        <Border
+                            Width="185"
+                            Height="88"
+                            Background="White"
+                            CornerRadius="5">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="10,13,0,0"
+                                        Background="Transparent"
+                                        FontSize="12"
+                                        FontWeight="Medium"
+                                        Text="아티클, 비디오" />
+                                    <Border
+                                        Width="24"
+                                        Height="24"
+                                        Margin="60,8,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="#00d48d"
+                                        CornerRadius="80">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="+" />
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="0,5,0,0"
+                                        HorizontalAlignment="Center"
+                                        FontSize="28"
+                                        FontWeight="Bold"
+                                        Text="2534" />
+                                    <TextBlock
+                                        VerticalAlignment="Bottom"
+                                        FontSize="22"
+                                        FontWeight="Bold"
+                                        Text="개" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                        <Border
+                            Width="185"
+                            Height="88"
+                            Background="White"
+                            CornerRadius="5">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="10,13,0,0"
+                                        Background="Transparent"
+                                        FontSize="12"
+                                        FontWeight="Medium"
+                                        Text="세미나" />
+                                    <Border
+                                        Width="24"
+                                        Height="24"
+                                        Margin="105,8,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="Red"
+                                        CornerRadius="80">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="+" />
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="0,5,0,0"
+                                        HorizontalAlignment="Center"
+                                        FontSize="28"
+                                        FontWeight="Bold"
+                                        Text="164" />
+                                    <TextBlock
+                                        VerticalAlignment="Bottom"
+                                        FontSize="22"
+                                        FontWeight="Bold"
+                                        Text="회" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                        <Border
+                            Width="185"
+                            Height="88"
+                            Background="White"
+                            CornerRadius="5">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="10,13,0,0"
+                                        Background="Transparent"
+                                        FontSize="12"
+                                        FontWeight="Medium"
+                                        Text="링커" />
+                                    <Border
+                                        Width="24"
+                                        Height="24"
+                                        Margin="115,8,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="#25aacf"
+                                        CornerRadius="80">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="+" />
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="0,5,0,0"
+                                        FontSize="28"
+                                        FontWeight="Bold"
+                                        Text="1371" />
+                                    <TextBlock
+                                        VerticalAlignment="Bottom"
+                                        FontSize="22"
+                                        FontWeight="Bold"
+                                        Text="명" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <Button
+                        Width="320"
+                        Height="40"
+                        Margin="0,15,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="Black"
+                        Classes="tommy"
+                        Content="멤버십 구독"
+                        Foreground="White">
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                                <Setter Property="Background" Value="Black" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Style>
+                        </Button.Styles>
+                    </Button>
+
+                </StackPanel>
+            </Border>
+
+            <Border
+                Width="1080"
+                Margin="0,10,0,0"
+                VerticalAlignment="Top"
+                Background="LightGray"
+                CornerRadius="5">
+                <Border
+                    Width="540"
+                    Margin="0,20,0,0"
+                    VerticalAlignment="Top"
+                    Background="Transparent">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock
+                                FontFamily="{StaticResource Ghana}"
+                                FontSize="25"
+                                FontWeight="Bold"
+                                Foreground="#00d48d"
+                                Text="new" />
+                            <TextBlock
+                                Margin="5,0,0,0"
+                                FontFamily="{StaticResource Ghana}"
+                                FontSize="25"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                Text="series" />
+                        </StackPanel>
+                        <TextBlock
+                            Margin="0,15,0,0"
+                            FontFamily="{StaticResource Pre}"
+                            FontSize="24"
+                            FontWeight="Bold"
+                            Foreground="Black"
+                            Text="콘텐츠 비지니스 설계자들 2024" />
+                        <TextBlock
+                            Margin="0,15,0,0"
+                            FontFamily="{StaticResource Pre}"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            Foreground="Black"
+                            LineSpacing="5"
+                            Text="안녕 난 이승헌이야. 쿤타매티르릭스 세계에서 세계를 만들고 있지        &#10;나의 고민은 항상 어떻게 하면 세계가 안정적이게 될까. 랄까?        &#10;또 나의 카와이 코도모 들의 행복?        &#10;지금 바로 시작이야."
+                            TextWrapping="Wrap" />
+                        <Border
+                            Margin="0,5,0,0"
+                            Background="White"
+                            CornerRadius="5">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border
+                                        Width="200"
+                                        Height="30"
+                                        Margin="10,10,0,0"
+                                        VerticalAlignment="Stretch"
+                                        Background="Violet"
+                                        CornerRadius="5">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            FontSize="12"
+                                            FontWeight="Medium"
+                                            Text="콘텐츠 비지니스 설계자들 2024" />
+                                    </Border>
+                                    <Border
+                                        Width="25"
+                                        Height="30"
+                                        Margin="5,5,0,0"
+                                        VerticalAlignment="Stretch"
+                                        Background="White"
+                                        CornerRadius="5">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            FontSize="12"
+                                            FontWeight="Medium"
+                                            Foreground="Black"
+                                            Text="10화" />
+                                    </Border>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock
+                                        Margin="15,10,0,0"
+                                        FontSize="23"
+                                        FontWeight="Bold"
+                                        Text="'뉴진스 아이폰 광고' 'D.P' 눈길 사로잡는 콘텐츠의 한끗"
+                                        TextWrapping="Wrap" />
+                                </StackPanel>
+
+                                <TextBlock
+                                    Margin="9,13,0,0"
+                                    FontSize="10"
+                                    FontWeight="Medium"
+                                    Text="이성헌 변승민" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

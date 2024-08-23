@@ -1,0 +1,21 @@
+<Application
+    x:Class="Jerrybaring1.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Jerrybaring1"
+    RequestedThemeVariant="Default">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Resources>
+        <FontFamily x:Key="Ghana">avares://Jerrybaring1/Assets/Ghana#Ghanachocolate</FontFamily>
+        <FontFamily x:Key="Pre">avares://Jerrybaring1/Assets/Pre#Pretendard</FontFamily>
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+</Application>
