@@ -2,11 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Jerrybaring1.Views;
+namespace Jerrybaring1;
 
-public partial class Follin1 : UserControl
+public partial class dummy : UserControl
 {
-    public Follin1()
+    public dummy()
     {
         InitializeComponent();
     }

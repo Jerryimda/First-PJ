@@ -2,11 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Jerrybaring1;
+namespace Jerrybaring1.Views;
 
-public partial class TopBarButton : Button
+public partial class TopBar : UserControl
 {
-    public TopBarButton()
+    public TopBar()
     {
         InitializeComponent();
     }
