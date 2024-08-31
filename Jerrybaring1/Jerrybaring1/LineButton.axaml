@@ -1,0 +1,40 @@
+<Button
+    x:Class="Jerrybaring1.LineButton"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="225"
+    Height="350"
+    mc:Ignorable="d">
+    <Button.Template>
+        <ControlTemplate>
+            <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                <Grid Margin="15,20,15,20" RowDefinitions="8.5*,1.5*">
+                    <TextBlock
+                        Grid.Row="0"
+                        FontFamily="{StaticResource Pre}"
+                        FontSize="20.25"
+                        FontWeight="Bold"
+                        LineSpacing="7"
+                        Text="{TemplateBinding LineText}"
+                        TextWrapping="Wrap" />
+                    <StackPanel Grid.Row="1">
+                        <TextBlock
+                            FontFamily="{StaticResource Pre}"
+                            FontSize="15"
+                            FontWeight="Bold"
+                            LineSpacing="7"
+                            Text="{TemplateBinding NameText}" />
+                        <TextBlock
+                            FontFamily="{StaticResource Pre}"
+                            FontSize="15"
+                            FontWeight="Regular"
+                            LineSpacing="7"
+                            Text="{TemplateBinding JobText}" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+    </Button.Template>
+</Button>

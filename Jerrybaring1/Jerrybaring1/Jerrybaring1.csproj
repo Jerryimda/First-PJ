@@ -33,6 +33,10 @@
     <None Remove="Views\NewFile1.txt" />
   </ItemGroup>
 
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<DefineConstants>$(DefineConstants);ENABLE_XAML_HOT_RELOAD</DefineConstants>
+	</PropertyGroup>
+	
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="11.1.0" />
@@ -43,5 +47,15 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
     <PackageReference Include="HotAvalonia" Version="1.1.1" />
     <PackageReference Include="HotAvalonia.Extensions" Version="1.1.1" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <UpToDateCheckInput Remove="RoundButton.axaml" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Compile Update="IconButton.axaml.cs">
+      <DependentUpon>IconButton.axaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -1,0 +1,20 @@
+<Button
+    x:Class="Jerrybaring1.RoundButton"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="6"
+    CornerRadius="4"
+    Cursor="Hand"
+    FontFamily="{StaticResource Pre}"
+    FontSize="12"
+    FontWeight="Bold"
+    mc:Ignorable="d">
+    <Button.Styles>
+        <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{TemplateBinding Background}" />
+            <Setter Property="Foreground" Value="{TemplateBinding Foreground}" />
+        </Style>
+    </Button.Styles>
+</Button>
