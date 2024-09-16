@@ -7,22 +7,6 @@ using System.Collections.ObjectModel;
 
 namespace Jerrybaring1.ViewModels
 {
-    public class LineCard
-    {
-        public LineCard(string? line, string? name, string? job)
-        {
-            Line = line;
-            Name = name;
-            Job = job;
-        }
-
-        public string? Line { get; set; }
-        public string? Name { get; set; }
-        public string? Job { get; set; }
-        public Brush? Brush { get; set; }
-
-    }
-
     public partial class MainViewModel : ViewModelBase
     {
         //View에서 '변수를' 바인딩 할 수 있게 ObservableProperty를 적어준다//
@@ -31,7 +15,7 @@ namespace Jerrybaring1.ViewModels
 
         public MainViewModel()
         {
-            CurrentPage = new LineContentViewModel();
+            CurrentPage = new MainPageViewModel();
         }
 
         //View에다가 '함수를' 바인딩 할 수 있게 처리해줌
@@ -52,7 +36,18 @@ namespace Jerrybaring1.ViewModels
         [RelayCommand]
         private void ShowLine()
         {
-            CurrentPage = new LineContentViewModel(); 
+            CurrentPage = new MainPageViewModel(); 
+        }
+
+        [RelayCommand]
+        private void Seminar()
+        {
+            CurrentPage = new SeminarTapViewModel();
         }
     }
 }
+
+//본인부터 자세히 적고 제자에게 말하시오.. ㅋㅋ
+//그리고 제안할 것이 하나더 있소
+//9월 15일까지는 가르쳐준걸 또 모른다고 하여도 한숨쉬지 말고 웃으면서 알려주시오~
+//ㅇㅇㅇㅇㅇㅇ

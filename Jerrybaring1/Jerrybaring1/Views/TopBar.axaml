@@ -19,7 +19,7 @@
                 Orientation="Horizontal"
                 Spacing="15">
                 <local:TopBarButton Content="시리즈" />
-                <local:TopBarButton Content="세미나" />
+                <local:TopBarButton Command="{Binding SeminarCommand}" Content="세미나" />
                 <local:TopBarButton Command="{Binding ShowTalkCommand}" Content="톡" />
                 <local:TopBarButton Content="B2B" />
             </StackPanel>

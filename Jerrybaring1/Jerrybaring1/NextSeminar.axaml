@@ -1,0 +1,82 @@
+<UserControl
+    x:Class="Jerrybaring1.NextSeminar"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid
+        Width="600"
+        Height="400"
+        ColumnDefinitions="1*,0.1*,1*">
+        <Grid Grid.Column="0" RowDefinitions="1.5*,7*,1.5*">
+            <StackPanel
+                Grid.Row="0"
+                Margin="15,20,15,15"
+                Orientation="Horizontal">
+                <TextBlock
+                    FontFamily="{StaticResource Ghana}"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="next" />
+                <TextBlock
+                    FontFamily="{StaticResource Ghana}"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="#00d48d"
+                    Text="seminar" />
+            </StackPanel>
+
+            <StackPanel
+                Grid.Row="1"
+                Margin="15,30,15,15"
+                Orientation="Vertical">
+                <TextBlock
+                    FontFamily="{StaticResource Pre}"
+                    FontSize="28"
+                    FontWeight="Bold"
+                    LineSpacing="7"
+                    Text="{Binding Title}"
+                    TextWrapping="Wrap" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        FontFamily="{StaticResource Pre}"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        Text="{Binding Name}" />
+                    <TextBlock
+                        Margin="5,0,0,0"
+                        VerticalAlignment="Bottom"
+                        FontFamily="{StaticResource Pre}"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        Text="{Binding Job}" />
+                </StackPanel>
+
+                <TextBlock
+                    Margin="0,45,0,0"
+                    FontFamily="{StaticResource Pre}"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    Text="{Binding Time}" />
+            </StackPanel>
+
+            <Button
+                Grid.Row="2"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                Background="#00d48d"
+                Content="자세히 보기"
+                CornerRadius="6"
+                FontFamily="{StaticResource Pre}"
+                FontSize="15"
+                FontWeight="Bold"
+                Foreground="Black" />
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Border Background="Green" CornerRadius="6" />
+        </Grid>
+    </Grid>
+</UserControl>

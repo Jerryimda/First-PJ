@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace Jerrybaring1.Views;
 
-public partial class dummy : UserControl
+public partial class SeminarTapView : UserControl
 {
-    public dummy()
+    public SeminarTapView()
     {
         InitializeComponent();
     }

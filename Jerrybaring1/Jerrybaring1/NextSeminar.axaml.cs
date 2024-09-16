@@ -2,11 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Jerrybaring1.Views;
+namespace Jerrybaring1;
 
-public partial class dummy : UserControl
+public partial class NextSeminar : UserControl
 {
-    public dummy()
+    public NextSeminar()
     {
         InitializeComponent();
     }

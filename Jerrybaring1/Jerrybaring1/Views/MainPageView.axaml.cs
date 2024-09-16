@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace Jerrybaring1.Views;
 
-public partial class LineContentView : UserControl
+public partial class MainPageView : UserControl
 {
-    public LineContentView()
+    public MainPageView()
     {
         InitializeComponent();
     }

@@ -53,8 +53,8 @@
     <Compile Update="IconButton.axaml.cs">
       <DependentUpon>IconButton.axaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\LineContentView.axaml.cs">
-      <DependentUpon>LineContentView.axaml</DependentUpon>
+    <Compile Update="Views\MainPageView.axaml.cs">
+      <DependentUpon>MainPageView.axaml</DependentUpon>
     </Compile>
     <Compile Update="Views\TalkView.axaml.cs">
       <DependentUpon>TalkView.axaml</DependentUpon>
